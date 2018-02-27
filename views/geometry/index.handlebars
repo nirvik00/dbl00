@@ -1,13 +1,17 @@
-<h5 id="ini">Geometry</h5>
-{{#each geometry}}
-<div class="card card-body">
-  <div class="alert alert-danger">{{num}}</div>
-  <p>{{field0}}</p>
-  <a class="btn btn-dark mb-2" href="/geometry/show/{{id}}"> Show</a>
-  </div>
-  {{else}}
-{{/each}} 
 
+<div class="card text-center">  
+  <div class="card-header">
+      <h5 id="ini">Geometry</h5>
+  </div>
+      {{#each geometry}}
+      <div class="card card-body">
+        <div class="alert alert-danger">{{num}}</div>
+        <p>{{field0}}</p>
+        <a class="btn btn-dark mb-2" href="/geometry/show/{{id}}"> Show</a>
+        </div>
+        {{else}}
+      {{/each}} 
+</div>
 
 <script>
   var k=0;
