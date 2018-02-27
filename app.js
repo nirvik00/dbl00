@@ -9,8 +9,8 @@ const path=require('path');
 const app = express();
 
 //db config + 
-//'mongodb://nirvik:root@ds249428.mlab.com:49428/dbl07';
-const mongoURI='mongodb://localhost/dbl07';
+const mongoURI = 'mongodb://nirvik:root@ds249428.mlab.com:49428/dbl07';
+//const mongoURI='mongodb://localhost/dbl07';
 //CONNECT TO remote database
 mongoose.Promise=global.Promise;
 mongoose.connect(mongoURI)
@@ -61,12 +61,11 @@ app.get('/geometry/show/:id', (req, res)=>{
   })
 });
 
-
 app.get('/about', (req, res)=>{
   res.render('about');
 });
 
-port=3030;
+port=process.env.PORT||3030;
 app.listen(port, ()=>{
   console.log(`server started on ${port}`);
 });
