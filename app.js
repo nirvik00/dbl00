@@ -44,11 +44,22 @@ app.use(methodOverride('_method'))
 app.get('/', (req, res) =>{
   Geometry.find({})
   .then(geometry=>{
-    res.render('index', {
+    //res.render('index', {geometry:geometry});  
+    res.render('index');  
+  });  
+});
+
+
+//app route to index.html -> display on 3.js
+app.get('/geometry/index', (req, res) =>{
+  Geometry.find({})
+  .then(geometry=>{
+    res.render('geometry/index', {
       geometry:geometry
     });  
   });  
 });
+
 
 //posted number is displayed in index
 //edit idea form

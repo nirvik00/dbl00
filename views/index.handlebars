@@ -1,4 +1,13 @@
-<h5 id="ini">Geometry</h5>
+  </div>
+  <div class = "jumbotron text-center">
+  <h1 class="display-3">{{title}}</h1>
+  <p class="lead">This is Visualizer (wip) tool.</p>
+  <p class="lead">More information will be given in due time</p>
+  <a href="/geometry/index" class="btn btn-dark btn-lg">List of Models</a>
+  <a href="/about" class="btn btn-dark btn-lg">About</a>
+  </div>
+  
+
 {{#each geometry}}
 <div class="card card-body">
   <div class="alert alert-danger">{{num}}</div>
@@ -9,12 +18,13 @@
 {{/each}} 
 
 
+
 <script>
   var k=0;
   {{#each geometry}}
     k+=1;
   {{/each}}
   console.log('there are '+k+'geometries');
-  document.getElementById("ini").innerHTML='Please select from one of '+k+' models';
+  //document.getElementById("ini").innerHTML='Please select from one of '+k+' models';
 </script>
 
